@@ -1,0 +1,14 @@
+.biz-icon {
+    font-size: 24px;
+    color: #616e7e;
+
+    &::slotted([slot="start"]) {
+        margin-right: unset;
+        margin-inline-end: 32px;
+    }
+
+    &::slotted([slot]) {
+        margin-top: 12px;
+        margin-bottom: 12px;
+    }
+}

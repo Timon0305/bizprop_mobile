@@ -1,0 +1,37 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/lessor/home"></ion-back-button>
+        </ion-buttons>
+        <ion-buttons slot="primary">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+
+        <ion-title>
+            <span class="page-title">My Enquiries</span>
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="inquiries-page page-content">
+        <div class="upper">
+            <div *ngFor="let inquiry of inquiries">
+                <div class="lessor-inquiry mt-3 p-2 ion-activatable ripple-parent" (click)="route('/lessor/inquiries/view/' + inquiry.id)">
+
+                    <div class="d-flex justify-content-start align-items-center">
+                        <div class="user">
+                            <ion-icon name="person-outline"></ion-icon>
+                        </div>
+
+                        <span class="ml-3">{{inquiry.name}}</span>
+                    </div>
+
+                    <span class="subtle normal color-light">{{relativeTimeAgo(inquiry.date)}}</span>
+
+                    <ion-ripple-effect></ion-ripple-effect>
+                </div>
+            </div>
+        </div>
+    </div>
+</ion-content>

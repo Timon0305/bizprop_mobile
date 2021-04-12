@@ -1,0 +1,9 @@
+ion-list {
+    &.top-border {
+        border-top: 1px solid #ededed;
+
+        &.thick {
+            border-top-width: 2px;
+        }
+    }
+}

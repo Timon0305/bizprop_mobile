@@ -1,0 +1,95 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+@font-face {
+    font-family: "OpenSans-Bold";
+    src: local("OpenSans-Bold"), url(/assets/fonts/open-sans/OpenSans-Bold.ttf) format("truetype");
+}
+@font-face {
+    font-family: "OpenSans";
+    src: local("OpenSans"), url(/assets/fonts/open-sans/OpenSans-Regular.ttf) format("truetype");
+}
+@font-face {
+    font-family: "Poppins";
+    src: local("Poppins"), url(/assets/fonts/poppins/Poppins-Regular.ttf) format("truetype");
+}
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+// @import "~bootstrap/scss/bootstrap.scss";
+@import "~bootstrap-utilities";
+
+@import '~@fortawesome/fontawesome-free/css/all.css';
+
+@import '~swiper/swiper.scss';
+
+/* -------------------------------------------------------------------------- */
+/*                                   Custom                                   */
+/* -------------------------------------------------------------------------- */
+
+@import "./theme/custom/variables";
+@import "./theme/custom/typography";
+
+/* -------------------------------------------------------------------------- */
+/*                                    Pages                                   */
+/* -------------------------------------------------------------------------- */
+
+@import "./theme/custom/pages/page";
+
+@import "./theme/custom/pages/add-property";
+@import "./theme/custom/pages/home";
+@import "./theme/custom/pages/inquiries";
+@import "./theme/custom/pages/lessor-inquiries";
+@import "./theme/custom/pages/login";
+@import "./theme/custom/pages/notifications";
+@import "./theme/custom/pages/register";
+@import "./theme/custom/pages/registration-selection";
+@import "./theme/custom/pages/search";
+
+
+/* -------------------------------------------------------------------------- */
+/*                                 Components                                 */
+/* -------------------------------------------------------------------------- */
+
+@import './theme/custom/components/ion-input';
+@import './theme/custom/components/ion-list';
+@import './theme/custom/components/ion-segment-button';
+@import './theme/custom/components/ion-toolbar';
+
+@import './theme/custom/components/biz-button';
+@import './theme/custom/components/biz-icon';
+@import './theme/custom/components/biz-input';
+@import './theme/custom/components/biz-input-upload';
+@import './theme/custom/components/biz-logo';
+@import './theme/custom/components/biz-map-selector';
+@import './theme/custom/components/biz-pin';
+@import './theme/custom/components/biz-toggle-input';
+@import './theme/custom/components/stepper';
+
+/* -------------------------------------------------------------------------- */
+/*                                  Overrides                                 */
+/* -------------------------------------------------------------------------- */
+
+@import './theme/custom/overrides';

@@ -1,0 +1,78 @@
+<ion-grid>
+    <ion-row>
+        <ion-col>
+            <app-text-input [form]="form"
+                            [name]="'name'"
+                            [label]="'Business name'"></app-text-input>
+        </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col>
+            <app-map-selector [form]="form"
+                              [name]="'mapAddress'"></app-map-selector>
+        </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col>
+            <div class="d-flex justify-content-start align-items-center mb-2">
+                <ion-toggle [(ngModel)]="additionalInfo"></ion-toggle>
+                <span class="subtle">Add additional data</span>
+            </div>
+        </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col>
+            <app-text-input [form]="form.controls.address"
+                            [name]="'address1'"
+                            [label]="'Physical address'"></app-text-input>
+        </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col>
+            <app-text-input [form]="form.controls.address"
+                            [name]="'address2'"
+                            [label]="'Physical address 2'"></app-text-input>
+        </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col>
+            <app-text-input [form]="form.controls.address"
+                            [name]="'address3'"
+                            [label]="'Physical address 3'"></app-text-input>
+        </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col>
+            <div *ngIf="hasAddressError"
+                 class="field-validation-error">
+                At least one address is required
+            </div>
+        </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col>
+            <app-password [form]="form"
+                            [name]="'password'"
+                            [label]="'Password'"
+                            [icon]="'fas fa-eye'"
+                            [iconClass]="'light-grey'"></app-password>
+        </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col>
+            <app-password [form]="form"
+                            [name]="'confirmPassword'"
+                            [label]="'Confirm Password'"
+                            [icon]="'fas fa-eye'"
+                            [iconClass]="'light-grey'"></app-password>
+        </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col class="d-flex justify-content-center">
+            <button class="biz-button btn-block"
+                    (click)="register()">
+                <span>Sign up</span>
+            </button>
+        </ion-col>
+    </ion-row>
+</ion-grid>

@@ -1,0 +1,228 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/lessor/home"></ion-back-button>
+        </ion-buttons>
+        <ion-buttons slot="primary">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+
+        <ion-title>
+            <span class="page-title">Add Property</span>
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="page-content">
+        <div class="upper">
+            <app-heading-logo class="logo-smaller"
+                              [headingSize]="'normal'"
+                              [logo]="'/assets/images/BizProp FINAL-fullNoShadow.png'"></app-heading-logo>
+
+            <ion-grid>
+                <ion-row>
+                    <ion-col>
+                        <app-text-input [form]="form"
+                                        [name]="'propertyName'"
+                                        [label]="'Property name (Not compulsory)'"></app-text-input>
+                    </ion-col>
+                </ion-row>
+
+                <ion-row>
+                    <ion-col>
+                        <app-map-selector [form]="form"
+                                          [name]="'mapAddress'"></app-map-selector>
+                    </ion-col>
+                </ion-row>
+
+                <ion-row>
+                    <ion-col>
+                        <app-text-input [form]="form"
+                                        [name]="'address'"
+                                        [label]="'Physical Address'"></app-text-input>
+                    </ion-col>
+                </ion-row>
+
+                <ion-row>
+                    <ion-col>
+                        <app-select-input [form]="form"
+                                          [name]="'city'"
+                                          [label]="'City'"
+                                          [options]="cities"></app-select-input>
+                    </ion-col>
+                </ion-row>
+
+                <ion-row>
+                    <ion-col>
+                        <app-select-input [form]="form"
+                                          [name]="'country'"
+                                          [label]="'Country'"
+                                          [options]="countries"></app-select-input>
+                    </ion-col>
+                </ion-row>
+
+                <ion-row>
+                    <ion-col>
+                        <app-select-input [form]="form"
+                                          [name]="'propertyType'"
+                                          [label]="'Property Type'"
+                                          [multiSelect]="true"
+                                          [options]="propertyTypes"></app-select-input>
+                    </ion-col>
+                </ion-row>
+
+                <ion-row>
+                    <ion-col>
+                        <app-select-input [form]="form"
+                                          [name]="'areaToRent'"
+                                          [label]="'Area to Rent'"
+                                          [multiSelect]="true"
+                                          [options]="areaToRent"></app-select-input>
+                    </ion-col>
+                </ion-row>
+
+                <ion-row>
+                    <ion-col>
+                        <app-text-input [form]="form"
+                                        [name]="'roomNumber'"
+                                        [label]="'Room Number'"></app-text-input>
+                    </ion-col>
+                </ion-row>
+
+                <ion-row>
+                    <ion-col>
+                        <app-select-input [form]="form"
+                                          [name]="'roomAmenities'"
+                                          [label]="'Room amenities'"
+                                          [multiSelect]="true"
+                                          [options]="roomAmenities"></app-select-input>
+                    </ion-col>
+                </ion-row>
+
+                <ion-row>
+                    <ion-col>
+                        <app-select-input [form]="form"
+                                          [name]="'equipment'"
+                                          [label]="'Equipment Available'"
+                                          [options]="equipment"></app-select-input>
+                    </ion-col>
+                </ion-row>
+
+                <ion-row>
+                    <ion-col>
+                        <app-text-input [form]="form"
+                                        [name]="'monthlyRent'"
+                                        [label]="'Monthly Rent'"
+                                        [numeric]="true"></app-text-input>
+                    </ion-col>
+                </ion-row>
+
+                <ion-row>
+                    <ion-col size="6"
+                             *ngFor="let image of images; let index = index">
+                        <div class="position-relative">
+                            <img [src]="image"
+                                 class="add-property-image">
+
+                            <div class="remove ion-activatable ripple-parent"
+                                 (click)="remove(index)">
+                                <i class="fas fa-minus"></i>
+                                <ion-ripple-effect></ion-ripple-effect>
+                            </div>
+                        </div>
+                    </ion-col>
+                </ion-row>
+
+                <ion-row>
+                    <ion-col>
+                        <app-input-upload class="mt-2"
+                                          [label]="'Upload Room Picture'"
+                                          (clicked)="upload()"></app-input-upload>
+                    </ion-col>
+                </ion-row>
+
+                <ion-row>
+                    <ion-col>
+                        <div *ngIf="images?.length < 2"
+                             class="field-validation-error">
+                            Minimum of 2 images required
+                        </div>
+                    </ion-col>
+                </ion-row>
+
+                <ion-row>
+                    <ion-col>
+                        <app-select-input [form]="form"
+                                          [name]="'propertyUse'"
+                                          [label]="'Property Uses'"
+                                          [multiSelect]="true"
+                                          [options]="propertyUses"></app-select-input>
+                    </ion-col>
+                </ion-row>
+
+                <ion-row>
+                    <ion-col>
+                        <app-multiline-input [form]="form"
+                                             [name]="'propertyDescription'"
+                                             [label]="'Property Description'"></app-multiline-input>
+                    </ion-col>
+                </ion-row>
+
+                <ion-row>
+                    <ion-col>
+                        <app-select-input [form]="form"
+                                          [name]="'furnished'"
+                                          [label]="'Furnished'"
+                                          [options]="furnished"></app-select-input>
+                    </ion-col>
+                </ion-row>
+
+                <ion-row>
+                    <ion-col>
+                        <app-select-input [form]="form"
+                                          [name]="'amenities'"
+                                          [label]="'Amenities'"
+                                          [multiSelect]="true"
+                                          [options]="amenities"></app-select-input>
+                    </ion-col>
+                </ion-row>
+
+                <ion-row>
+                    <ion-col>
+                        <app-select-input [form]="form"
+                                          [name]="'listingTypes'"
+                                          [label]="'Listing Type'"
+                                          [multiSelect]="true"
+                                          [options]="listingTypes"></app-select-input>
+                    </ion-col>
+                </ion-row>
+
+                <ion-row>
+                    <ion-col>
+                        <app-date-input [form]="form"
+                                        [name]="'dateFrom'"
+                                        [label]="'Date From'"></app-date-input>
+                    </ion-col>
+                </ion-row>
+
+                <ion-row>
+                    <ion-col>
+                        <app-select-input [form]="form"
+                                          [name]="'approvalStatus'"
+                                          [label]="'Approval Status'"
+                                          [options]="approvalStatus"></app-select-input>
+                    </ion-col>
+                </ion-row>
+                
+                <ion-row class="mt-3">
+                    <ion-col>
+                        <button class="biz-button btn-block"
+                                (click)="addProperty()">Save and add property</button>
+                    </ion-col>
+                </ion-row>
+
+            </ion-grid>
+        </div>
+    </div>
+</ion-content>

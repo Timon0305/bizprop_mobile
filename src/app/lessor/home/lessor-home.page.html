@@ -1,0 +1,58 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="primary">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="page-content tabs-bottom">
+        <div class="upper">
+            <app-heading-logo class="logo-smaller"
+                              [headingSize]="'normal'"
+                              [logo]="'/assets/images/BizProp FINAL-fullNoShadow.png'"
+                              [heading]="'Find your space'"></app-heading-logo>
+            <ion-grid>
+                <ion-row class="mt-4">
+                    <ion-col class="ion-no-padding">
+                        <div class="home-block"
+                             (click)="route('lessor/property/add')">
+                            <img class="mb-2"
+                                 src="/assets/images/listings.png">
+                            <span>Add Property</span>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-no-padding">
+                        <div class="home-block"
+                             (click)="route('lessor/property/edit')">
+                            <img class="mb-2"
+                                 src="/assets/images/inquiries.png">
+                            <span>Edit Property</span>
+                        </div>
+                    </ion-col>
+                </ion-row>
+
+                <ion-row>
+                    <ion-col class="ion-no-padding">
+                        <div class="home-block"
+                             (click)="route('lessor/listings/results')">
+                            <img class="mb-2"
+                                 src="/assets/images/inquiries.png">
+                            <span>My Listings</span>
+                        </div>
+                    </ion-col>
+
+                    <ion-col class="ion-no-padding">
+                        <div class="home-block"
+                             (click)="route('lessor/inquiries')">
+                            <img class="mb-2"
+                                 src="/assets/images/inquiries.png">
+                            <span>My Enquiries</span>
+                        </div>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </div>
+    </div>
+</ion-content>

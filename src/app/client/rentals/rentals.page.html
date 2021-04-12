@@ -1,0 +1,44 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/client/home"></ion-back-button>
+        </ion-buttons>
+        <ion-buttons slot="primary">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+
+        <ion-title>
+            <span class="page-title">My Rentals</span>
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="rentals">
+        <ion-list lines="full">
+    
+            <ion-item-sliding #slidingItem
+                              *ngFor="let rental of rentals; let index=index">
+                <ion-item>
+                    <img slot="start"
+                         [src]="rental.image">
+                    <ion-label>
+                        <h2>{{rental.heading}}</h2>
+                        <p>{{rental.additional}}</p>
+                    </ion-label>
+                    <div slot="end"
+                         class="action"
+                         (click)="toggleState(slidingItem)">
+                        <i class="fas fa-ellipsis-h"></i>
+                    </div>
+                </ion-item>
+    
+                <ion-item-options side="end">
+                    <ion-item-option (click)="remove(rental, index)"
+                                     color="danger">Remove</ion-item-option>
+                </ion-item-options>
+            </ion-item-sliding>
+    
+        </ion-list>
+    </div>
+</ion-content>

@@ -1,0 +1,29 @@
+<div class="date-picker"
+     (click)="open(datepicker)">
+
+    <div class="input-container"
+         [formGroup]="form"
+         #contentElement>
+        <input class="biz-input"
+               autocomplete="none"
+               [class.contains-text]="containsText"
+               [class.input-validation-error]="hasError"
+               [id]="id"
+               [readOnly]="true"
+               [value]="formValue | date:dateFormat">
+        <label [for]="id"
+               class="biz-input-label">{{label}}</label>
+        <div *ngIf="hasError"
+             class="field-validation-error">
+            {{firstError}}
+        </div>
+        <div *ngIf="icon"
+             (click)="onIconClick($event)"
+             [ngClass]="iconClasses">
+            <i [class]="icon"></i>
+        </div>
+    </div>
+</div>
+
+<ion-datetime #datepicker
+              class="ion-hide"></ion-datetime>

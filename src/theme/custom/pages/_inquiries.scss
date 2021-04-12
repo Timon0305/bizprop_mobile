@@ -1,0 +1,50 @@
+.inquiries, .rentals {
+    img {
+        width: 75px;
+        height: 60px;
+
+        border-radius: 18px;
+
+        margin-bottom: 20px;
+        margin-top: 20px;
+        overflow: hidden;
+
+        &.danger {
+            border: 2px solid var(--ion-color-danger);
+        }
+
+        &.warn {
+            border: 2px solid var(--ion-color-warning);
+        }
+
+        &.safe {
+            border: 2px solid var(--ion-color-success);
+        }
+    }
+
+    .action {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin-right: 15px;
+
+        height: 35px;
+        width: 35px;
+
+        border-radius: 3px;
+
+        transition: all .15s ease-in;
+
+        color: $text-color;
+
+        &:active {
+            background: rgb(208 208 208 / 32%);
+        }
+    }
+
+    .options {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+}

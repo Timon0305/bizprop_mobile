@@ -1,0 +1,34 @@
+<div class="input-container"
+     [formGroup]="form"
+     (click)="open(select)"
+     #contentElement>
+    <input class="biz-input"
+           autocomplete="none"
+           [class.contains-text]="containsText"
+           [class.input-validation-error]="hasError"
+           [id]="id"
+           [readOnly]="true"
+           [value]="value">
+    <label [for]="id"
+           class="biz-input-label">{{label}}</label>
+    <div *ngIf="hasError"
+         class="field-validation-error">
+        {{firstError}}
+    </div>
+    <div *ngIf="icon"
+         (click)="onIconClick($event)"
+         [ngClass]="iconClasses">
+        <i [class]="icon"></i>
+    </div>
+</div>
+
+
+<!-- ----------------------------------------------------------------------- -->
+<!--               Hidden component, just using its behaviour                -->
+<!-- ----------------------------------------------------------------------- -->
+<ion-select #select
+            class="ion-hide"
+            [multiple]="multiSelect">
+    <ion-select-option *ngFor="let option of options"
+                       [value]="option.value">{{option.display}}</ion-select-option>
+</ion-select>

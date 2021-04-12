@@ -1,0 +1,71 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar class="transparent">
+        <ion-buttons>
+            <ion-back-button defaultHref="/auth/login"
+                             class="back-button"></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <div class="page-content registration-selection px-0">
+        <div class="upper h-100">
+            <div class="d-flex flex-column align-items-stretch h-100">
+                <app-heading-logo class="logo-smaller"
+                                  [logo]="'/assets/images/BizProp FINAL-IconNoShadow.png'"></app-heading-logo>
+
+                <ion-grid class="ion-no-padding w-100">
+                    <ion-row class="ion-no-padding h-50">
+                        <ion-col class="ion-no-padding">
+                            <div class="overflow-hidden ion-activatable ripple-parent h-100">
+                                <div class="selection rent"
+                                     (click)="registerClient()">
+                                    <img src="/assets/images/rent.png"
+                                         height="160px"
+                                         width=" 190px">
+                                    <span>Looking to rent?</span>
+                                </div>
+                                <ion-ripple-effect></ion-ripple-effect>
+                            </div>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row class="ion-no-padding h-50">
+                        <ion-col class="ion-no-padding ">
+                            <div class="overflow-hidden ion-activatable ripple-parent h-100">
+                                <div class="">
+
+                                </div>
+                                <div class="selection lease"
+                                     (click)="registerLessor()">
+                                    <img src="/assets/images/lease.png"
+                                         height="160px"
+                                         width=" 190px">
+                                    <span>Looking for tenants?</span>
+                                </div>
+                                <ion-ripple-effect></ion-ripple-effect>
+                            </div>
+                        </ion-col>
+                    </ion-row>
+
+                    <!-- <ion-row>
+                    <ion-col>
+                       
+                    </ion-col>
+                </ion-row>
+
+                <ion-row class="mt-3">
+                    <ion-col>
+                        <button (click)="register()"
+                                class="biz-button btn-block">Register</button>
+                    </ion-col>
+                </ion-row> -->
+
+                </ion-grid>
+            </div>
+
+        </div>
+        <div class="lower">
+            <app-terms-of-service></app-terms-of-service>
+        </div>
+    </div>
+</ion-content>

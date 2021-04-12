@@ -1,0 +1,18 @@
+<div class="map">
+    <div class="map-image">
+        <div class="ripple-parent ion-activatable"
+             (click)="mapClick($event)">
+            <img src="/assets/images/maps-fig.png" />
+            <ion-ripple-effect></ion-ripple-effect>
+        </div>
+    </div>
+
+
+    <div class="selector">
+        <app-text-input [form]="form"
+                        [name]="name"
+                        [label]="label"
+                        [icon]="'fas fa-filter'"
+                        (iconClick)="onIconClick($event)"></app-text-input>
+    </div>
+</div>

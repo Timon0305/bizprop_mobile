@@ -1,0 +1,12 @@
+<div class="pin-wrapper">
+    <input *ngFor="let char of chars; let index = index; trackBy: trackByFn"
+           #el
+           [id]="'pin_' + index"
+           autocomplete="new-password"
+           class="pin-input"
+           maxlength="1"
+           type="number"
+           [ngModel]="char"
+           (keyup)="change($event, el, index)"
+           (keydown)="verify($event, el, index)">
+</div>

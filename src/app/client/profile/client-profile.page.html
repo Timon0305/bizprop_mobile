@@ -1,0 +1,89 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/client/home"></ion-back-button>
+        </ion-buttons>
+        <ion-buttons slot="primary">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+
+        <ion-title>
+            <span class="page-title">Profile</span>
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <div class="page-content">
+        <div class="upper">
+            <app-heading-logo class="logo-smaller"
+                              [headingSize]="'normal'"
+                              [logo]="'/assets/images/BizProp FINAL-fullNoShadow.png'"></app-heading-logo>
+
+            <ion-grid>
+                <ion-row>
+                    <ion-col>
+                        <app-text-input [form]="form"
+                                        [name]="'name'"
+                                        [label]="'Client Name'"></app-text-input>
+                    </ion-col>
+                </ion-row>
+
+                <ion-row>
+                    <ion-col>
+                        <app-text-input [form]="form"
+                                        [name]="'email'"
+                                        [type]="'email'"
+                                        [label]="'Email Address'"></app-text-input>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col>
+                        <app-text-input [form]="form"
+                                        [name]="'contact1'"
+                                        [label]="'Contact Number'"></app-text-input>
+                    </ion-col>
+                </ion-row>
+
+                <ion-row>
+                    <ion-col>
+                        <app-text-input [form]="form"
+                                        [name]="'contact2'"
+                                        [label]="'Additional Contact Number'"></app-text-input>
+                    </ion-col>
+                </ion-row>
+
+                <ion-row>
+                    <ion-col>
+                        <app-password [form]="form"
+                                      [name]="'password'"
+                                      [label]="'Enter Password'"
+                                      [icon]="'fas fa-eye'"
+                                      [iconClass]="'light-grey'"></app-password>
+                    </ion-col>
+                </ion-row>
+
+                <ion-row>
+                    <ion-col>
+                        <app-password [form]="form"
+                                      [name]="'confirmPassword'"
+                                      [label]="'Confirm Password'"
+                                      [icon]="'fas fa-eye'"
+                                      [iconClass]="'light-grey'"></app-password>
+                    </ion-col>
+                </ion-row>
+
+                <ion-row class="mt-3">
+                    <ion-col>
+                        <button class="biz-button btn-block"
+                                (click)="save()">Save</button>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+
+        </div>
+
+    </div>
+
+</ion-content>

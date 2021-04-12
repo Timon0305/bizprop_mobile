@@ -1,0 +1,112 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/client/home"></ion-back-button>
+        </ion-buttons>
+        <ion-buttons slot="primary">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+
+        <ion-title>
+            <span class="page-title">Filter</span>
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="page-content">
+        <div class="upper">
+            <ion-grid>
+                <ion-row>
+                    <ion-col>
+                        <app-date-input [form]="form"
+                                        [name]="'dateFrom'"
+                                        [label]="'From'"
+                                        [dateFormat]="dateFormat"></app-date-input>
+                    </ion-col>
+                    <ion-col>
+                        <app-date-input [form]="form"
+                                        [name]="'dateTo'"
+                                        [label]="'To'"
+                                        [dateFormat]="dateFormat"></app-date-input>
+                    </ion-col>
+                </ion-row>
+
+                <ion-row>
+                    <ion-col>
+                        <app-text-input [form]="form"
+                                        [name]="'rooms'"
+                                        [label]="'Number of rooms'"
+                                        [numeric]="true"></app-text-input>
+                    </ion-col>
+                </ion-row>
+
+                <ion-row>
+                    <ion-col>
+                        <app-select-input *ngIf="!isResetting"
+                                          [form]="form"
+                                          [name]="'propertyTypes'"
+                                          [label]="'Property Type'"
+                                          [multiSelect]="true"
+                                          [options]="propertyTypes"></app-select-input>
+                    </ion-col>
+                </ion-row>
+
+                <ion-row>
+                    <ion-col>
+                        <app-select-input *ngIf="!isResetting"
+                                          [form]="form"
+                                          [name]="'propertyUses'"
+                                          [label]="'Property Uses'"
+                                          [multiSelect]="true"
+                                          [options]="propertyUses"></app-select-input>
+                    </ion-col>
+                </ion-row>
+
+                <ion-row>
+                    <ion-col>
+                        <app-select-input *ngIf="!isResetting"
+                                          [form]="form"
+                                          [name]="'decor'"
+                                          [label]="'Decor'"
+                                          [multiSelect]="true"
+                                          [options]="decor"></app-select-input>
+                    </ion-col>
+                </ion-row>
+
+                <ion-row>
+                    <ion-col>
+                        <app-select-input *ngIf="!isResetting"
+                                          [form]="form"
+                                          [name]="'amenities'"
+                                          [label]="'Amenities'"
+                                          [multiSelect]="true"
+                                          [options]="amenities"></app-select-input>
+                    </ion-col>
+                </ion-row>
+
+                <ion-row>
+                    <ion-col>
+                        <app-select-input *ngIf="!isResetting"
+                                          [form]="form"
+                                          [name]="'type'"
+                                          [label]="'Listing Type'"
+                                          [multiSelect]="true"
+                                          [options]="listingTypes"></app-select-input>
+                    </ion-col>
+                </ion-row>
+
+                <ion-row>
+                    <ion-col>
+                        <button class="biz-button btn-plain btn-default w-100"
+                                (click)="reset()">Clear</button>
+                    </ion-col>
+                    <ion-col>
+                        <button class="biz-button btn-plain btn-primary w-100"
+                                (click)="apply()">Apply</button>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </div>
+    </div>
+</ion-content>

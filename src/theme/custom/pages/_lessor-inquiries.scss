@@ -1,0 +1,39 @@
+.inquiries-page {
+    .lessor {
+        &-inquiry {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 5px;
+            overflow: hidden;
+
+            .user {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+
+                background-color: #e2e8ed;
+                height: 40px;
+                width: 40px;
+                border-radius: 3px;
+            }
+
+            .result {
+                width: 100%;
+                .info {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: start;
+                    align-items: start;
+                    
+                    width: 100%;
+                    color: white;
+
+                    background-color: #172050;
+                }
+            }
+        }
+    }
+}

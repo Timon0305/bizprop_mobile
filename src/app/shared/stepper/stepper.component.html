@@ -1,0 +1,37 @@
+<!-- <div class="md-stepper-horizontal primary">
+
+    <div *ngFor="let step of steps; let index = index"
+         class="md-step"
+         [class.done]="step.done || step.active"
+         (click)="stepClicked(step, index)">
+        <div class="md-step-circle"><span>{{index + 1}}</span></div>
+        <div class="md-step-title"></div>
+        <div class="md-step-bar-left"></div>
+        <div class="md-step-bar-right"></div>
+    </div>
+</div> -->
+
+<!-- 
+    
+    Adjusted from the article, https://medium.com/javascript-in-plain-english/create-a-fully-dynamic-tab-component-in-angular-9f5187ab35dc
+    https://stackblitz.com/edit/angular-tabs-component-tony?embed=1&file=src/app/app.component.ts
+    
+!-->
+
+<div class="md-stepper-horizontal primary">
+    <div *ngFor="let step of stepItems$ | async; let index = index"
+         class="md-step"
+         (click)="selectStep(step)"
+         [class.done]="step.done || step.active">
+        <div class="md-step-circle"><span>{{index + 1}}</span></div>
+        <div class="md-step-title"></div>
+        <div class="md-step-bar-left"></div>
+        <div class="md-step-bar-right"></div>
+    </div>
+</div>
+<div class="steps-body">
+    <ng-container *ngIf="activeStep && activeStep.bodyComponent">
+        <ng-container *ngTemplateOutlet="activeStep.bodyComponent.bodyContent">
+        </ng-container>
+    </ng-container>
+</div>

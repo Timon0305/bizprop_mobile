@@ -1,0 +1,43 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar class="transparent">
+        <ion-buttons>
+            <ion-back-button defaultHref="/auth/register-selection"
+                             class="back-button"></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <div class="page-content">
+        <div class="upper">
+            <app-heading-logo [heading]="'Personal Detail'" [logo]="'/assets/images/BizProp FINAL-IconNoShadow.png'"></app-heading-logo>
+
+            <ion-grid>
+                <ion-row>
+                    <ion-col>
+                        <app-stepper>
+                            <app-step-item [active]="personalDetailActive"
+                                           [done]="personalDetailDone">
+                                <app-step-body>
+                                    <app-lessor-personal-detail (done)="goToBusinessDetail()"></app-lessor-personal-detail>
+                                </app-step-body>
+                            </app-step-item>
+
+                            <app-step-item [active]="businessDetailActive"
+                                           [done]="businessDetailDone"
+                                           >
+                                <app-step-body>
+                                    <app-lessor-business-detail></app-lessor-business-detail>
+                                </app-step-body>
+                            </app-step-item>
+                        </app-stepper>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </div>
+        
+        <div class="lower-content">
+            <app-terms-of-service></app-terms-of-service>
+        </div>
+    </div>
+</ion-content>

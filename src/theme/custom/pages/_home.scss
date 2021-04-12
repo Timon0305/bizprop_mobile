@@ -1,0 +1,31 @@
+.home {
+    &-block {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        border: 1px solid #e2e8ed;
+        height: 185px;
+        // width: 185px;
+
+        color: $heading-color;
+        font-size: 14px;
+        font-family: 'OpenSans';
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        letter-spacing: normal;
+        text-transform: uppercase;
+
+        &:active {
+            background: rgb(208 208 208 / 32%);
+        }
+
+        img {
+            height: 65px;
+            width: 65px;
+        }
+    }
+}

@@ -1,0 +1,101 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/lessor/listings/results"></ion-back-button>
+        </ion-buttons>
+        <ion-buttons slot="primary">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+
+        <ion-title>
+            <span class="page-title">View Property</span>
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="page-content search search-result">
+        <div class="upper">
+            <div class="position-relative mt-2">
+
+                <ion-slides [pager]="true"
+                            [options]="sliderOptions">
+                    <ion-slide *ngFor="let img of searchResult.images">
+                        <img [src]="img"
+                             (click)="openPreview(img)">
+                    </ion-slide>
+                </ion-slides>
+
+                <div class="biz-button-bar position-absolute top d-flex justify-content-end p-2">
+                    <button class="biz-button btn-sm btn-semi-transparent color-white">
+                        <ion-icon name="heart-outline"></ion-icon>
+                    </button>
+                    <button class="biz-button btn-sm btn-semi-transparent color-white">
+                        <ion-icon name="share-outline"></ion-icon>
+                    </button>
+                </div>
+            </div>
+
+            <div class="title mt-2">
+                <span>{{searchResult.title}}</span>
+            </div>
+
+            <div class="subtle ">
+                <span>{{searchResult.address}}</span>
+            </div>
+
+            <span class="color-primary smaller">{{searchResult.type}}</span>
+
+            <div class="features mt-3">
+                <div *ngFor="let feature of searchResult.features"
+                     class="feature">
+                    <i [class]="feature.icon"></i>
+                    <span>{{feature.title}}</span>
+                </div>
+            </div>
+
+            <div class="subtle normal mt-4">
+                {{searchResult.description}}
+            </div>
+
+            <div class="information mt-2">
+                <div class="price larger">
+                    R {{searchResult.totalCost}}
+                </div>
+                <div class="contact">
+                    <div class="name">{{searchResult.contact.name}}</div>
+                    <div>{{searchResult.contact.contactNumber}}</div>
+                    <div>{{searchResult.contact.email}}</div>
+                </div>
+            </div>
+
+            <ion-grid>
+                <ion-row>
+                    <ion-col>
+                        <app-date-input [form]="form"
+                                        [name]="'from'"
+                                        [iconClass]="'light-grey'"
+                                        [icon]="'far fa-calendar-alt'"></app-date-input>
+                    </ion-col>
+                    <ion-col>
+                        <app-date-input [form]="form"
+                                        [name]="'to'"
+                                        [iconClass]="'light-grey'"
+                                        [icon]="'far fa-calendar-alt'"></app-date-input>
+                    </ion-col>
+                </ion-row>
+
+                <ion-row class="mt-5">
+                    <ion-col>
+                        <button class="biz-button btn-block"
+                                (click)="save()">Save changes</button>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </div>
+
+        <div class="lower">
+
+        </div>
+    </div>
+</ion-content>

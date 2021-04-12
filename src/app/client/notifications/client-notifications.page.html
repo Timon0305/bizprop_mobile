@@ -1,0 +1,34 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/client/home"></ion-back-button>
+        </ion-buttons>
+        <ion-buttons slot="primary">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+
+        <ion-title>
+            <span class="page-title">Notifications</span>
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+    <div class="notifications">
+        <ion-list lines="full">
+
+            <ion-item *ngFor="let notification of notifications">
+                <ion-avatar slot="start">
+                    <img [src]="notification.userImage">
+                </ion-avatar>
+                <ion-label>
+                    <h2>{{notification.userName}}</h2>
+                    <p>{{notification.subHeader}}</p>
+                </ion-label>
+                <button *ngIf="notification.canMessage"
+                        slot="end"
+                        class="biz-button btn-plain btn-primary">Message</button>
+            </ion-item>
+        </ion-list>
+    </div>
+</ion-content>

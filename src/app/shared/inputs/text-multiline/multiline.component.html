@@ -1,0 +1,18 @@
+<div class="input-container"
+     [formGroup]="form"
+     #contentElement>
+    <label [for]="id"
+           class="biz-input-label no-float"
+           [class.light-grey]="!containsText">{{label}}</label>
+    <textarea class="biz-input"
+              autocomplete="none"
+              [class.input-validation-error]="hasError"
+              [formControlName]="name"
+              [id]="id"
+              [readOnly]="readonly"
+              [rows]="rows"></textarea>
+    <div *ngIf="hasError"
+         class="field-validation-error">
+        {{firstError}}
+    </div>
+</div>

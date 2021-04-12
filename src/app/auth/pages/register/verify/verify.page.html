@@ -1,0 +1,51 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar class="transparent">
+        <ion-buttons>
+            <ion-back-button defaultHref="/auth/register-selection"
+                             class="back-button"></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <div class="page-content">
+        <div class="upper">
+            <app-heading-logo [heading]="'Verification'" [logo]="'/assets/images/BizProp FINAL-IconNoShadow.png'"></app-heading-logo>
+
+            <ion-grid>
+                <ion-row>
+                    <ion-col>
+                        <div class="ion-text-center">
+                            <span class="subtle normal">
+                                A 5-Digit PIN has been sent to your email. <br>
+                                Enter it below to continue
+                            </span>
+                        </div>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col>
+                        <app-verify-pin [submitId]="'btnVerify'" (pinChanged)="onPinChanged($event)"></app-verify-pin>
+                    </ion-col>
+                </ion-row>
+
+                <ion-row>
+                    <ion-col>
+                        <button id="btnVerify"
+                                class="biz-button btn-block" (click)="verify()">Verify</button>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </div>
+
+        <div class="lower">
+            <div class="ion-text-center mb-3">
+                <span class="subtle">Already have an account? <a class="subtle color-primary"
+                       [routerLink]="['/auth/login']">Sign in</a></span>
+            </div>
+        </div>
+    </div>
+
+</ion-content>
+
+<ion-spinner *ngIf="showSpinner"></ion-spinner>

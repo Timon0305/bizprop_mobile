@@ -1,0 +1,197 @@
+.search {
+    &-overview {
+        // ion-img::part(img) {
+        //     border: 1px solid red!important;
+        // }
+
+        max-width: 360px;
+
+        .overview {
+            &-image {
+                position: relative;
+                margin-bottom: 20px;
+
+                .ripple-overflow {
+                    position: relative;
+                    overflow: hidden;
+                    border-radius: 16px;
+                }
+
+                .container {
+                    .distance {
+                        position: absolute;
+                        top: 10px;
+                        left: 10px;
+
+                        padding: 5px 10px;
+
+                        width: fit-content;
+                        border-radius: 13px;
+                        backdrop-filter: blur(1px);
+                        background-color: rgba(0, 0, 0, 0.4);
+
+                        font-size: 11px;
+                        line-height: 1.36;
+                        color: #ffffff;
+                    }
+                }
+
+                .edit {
+                    position: absolute;
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    border-radius: 50%;
+
+                    bottom: -8px;
+                    right: 15px;
+                    width: 30px;
+                    height: 30px;
+
+                    color: var(--ion-color-primary);
+                    background-color: #eeeff1;
+                    overflow: hidden;
+                }
+            }
+        }
+
+        ion-img {
+            height: 200px;
+            object-fit: cover;
+            border-radius: 16px;
+        }
+
+        .title {
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 1.38;
+
+            color: $text-color;
+        }
+
+        .price {
+            color: var(--ion-color-primary);
+
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 1.33;
+        }
+
+        .address {
+            font-size: 12px;
+
+            line-height: 1.42;
+            color: $text-color;
+        }
+
+        .tags {
+            display: flex;
+
+            font-size: 12px;
+            font-weight: bold;
+            line-height: 1.42;
+            color: $dark-blue;
+            border-radius: 4px;
+            background-color: rgba(212, 212, 212, 0.43);
+            padding: 8px 12px;
+            width: fit-content;
+
+            .tag {
+                &:not(:last-child) {
+                    margin-right: 10px;
+                }
+                &:not(:first-child) {
+                    border-left: 1px solid $dark-blue;
+                    padding-left: 10px;
+                }
+            }
+        }
+    }
+
+    &-result {
+        // Display the buttons above the image
+        .biz-button-bar {
+            z-index: 1;
+        }
+
+        .swiper {
+            &-container {
+                max-height: 300px;
+
+                .img {
+                    max-width: 100%;
+                    max-height: 100%;
+                }
+            }
+
+            &-slide {
+                img {
+                    max-height: 300px;
+                }
+            }
+        }
+
+        .features {
+            display: flex;
+            justify-content: flex-start;
+            justify-items: center;
+            overflow-x: auto;
+
+            .feature {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                align-items: center;
+
+                background-color: #ecedef;
+                height: 55px;
+                min-width: 115px;
+                color: var(--ion-color-primary);
+
+                &:not(:first-child) {
+                    margin-left: 5px;
+                }
+
+                i {
+                    font-size: larger;
+                    min-width: 25px;
+                    text-align: center;
+                    color: $text-color;
+                }
+
+                span {
+                    font-size: small;
+                }
+            }
+        }
+
+        .information {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .price {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                min-width: 50%;
+                min-height: 60px;
+                background: rgba(212, 212, 212, 0.43);
+            }
+
+            .contact {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                
+                font-size: smaller;
+                .name {
+                    color: var(--ion-color-primary);
+                }
+            }
+        }
+    }
+}

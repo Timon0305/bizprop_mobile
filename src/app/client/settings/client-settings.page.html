@@ -1,0 +1,51 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/client/home"></ion-back-button>
+        </ion-buttons>
+        <ion-buttons slot="primary">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+
+        <ion-title>
+            <span class="page-title">Settings</span>
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <div class="page-content">
+        <div class="upper">
+            <app-heading-logo class="logo-smaller"
+                              [headingSize]="'normal'"
+                              [logo]="'/assets/images/BizProp FINAL-fullNoShadow.png'"></app-heading-logo>
+
+            <ion-list lines="none">
+                <ion-item >
+                    <div class="d-flex flex-column align-items-start w-100">
+                        <span class="subtle mb-2">Log out of your account</span>
+                        <button class="biz-button btn-block"
+                                (click)="logout()">Log out</button>
+                    </div>
+                </ion-item>
+            </ion-list>
+        </div>
+
+        <div class="lower">
+            <ion-list lines="none" class="top-border thick">
+                <ion-list-header>Danger zone</ion-list-header>
+
+                <ion-item class="mb-5">
+                    <div class="d-flex flex-column align-items-start w-100">
+                        <span class="subtle mb-2">Permanently remove your account</span>
+                        <button class="biz-button btn-block btn-danger"
+                                (click)="removeAccount()">Remove Account</button>
+                    </div>
+                </ion-item>
+            </ion-list>
+        </div>
+
+    </div>
+
+</ion-content>

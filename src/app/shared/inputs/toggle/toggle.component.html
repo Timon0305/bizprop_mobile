@@ -1,0 +1,7 @@
+<div class="input-container">
+    <div class="d-flex justify-content-between align-items-center underline">
+        <label class="biz-input-label no-float light-grey w-100"
+               (click)="value = !value">{{label}}</label>
+        <ion-toggle [(ngModel)]="value"></ion-toggle>
+    </div>
+</div>

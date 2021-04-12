@@ -1,0 +1,81 @@
+.heading {
+    color: $heading-color;
+
+    font-family: $heading-font;
+    font-size: $h1-size;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+
+    text-align: center;
+
+    &-1 {
+        font-size: $h1-size;
+    }
+
+    &-2 {
+        font-size: $h2-size;
+    }
+
+    &-3 {
+        font-size: $h3-size;
+    }
+
+    &-logo {
+        font-size: 14px;
+        font-family: $heading-font;
+        color: $heading-color;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        letter-spacing: normal;
+
+        &.primary {
+            color: #005fab;
+        }
+
+        &.secondary {
+            color: #515151;
+        }
+    }
+}
+
+.text-upper {
+    text-transform: uppercase;
+}
+
+.subtle {
+    font-family: "OpenSans";
+    font-size: 10px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.8;
+    letter-spacing: normal;
+    color: $text-color;
+
+    &.normal {
+        font-size: 12px;
+    }
+}
+
+.color-primary {
+    color: var(--ion-color-primary);
+}
+
+.color-light {
+    color: $color-750;
+}
+
+.smaller {
+    font-size: smaller;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.larger {
+    font-size: larger;
+}

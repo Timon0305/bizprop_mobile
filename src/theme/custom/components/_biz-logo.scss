@@ -1,0 +1,22 @@
+.biz-logo {
+    &.wrapper {
+        // margin-top: -56px // Toolbar height, this might have to be conditional.
+    }
+    &.header {
+        margin-top: -50px;
+    }
+
+    img {
+        max-width: 155px;
+        margin-bottom: -55px; // Weird padding in the image
+    }
+}
+
+.logo-smaller {
+    .biz-logo {
+        img {
+            max-width: 100px;
+            margin-bottom: -20px;
+        }
+    }
+}

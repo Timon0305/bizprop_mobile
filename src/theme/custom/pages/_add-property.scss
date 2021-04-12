@@ -1,0 +1,26 @@
+.add-property {
+    &-image {
+        border-radius: 10px;
+
+        position: relative;
+
+        ~ .remove {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            top: 0;
+            right: 0;
+
+            height: 21px;
+            width: 21px;
+
+            border-radius: 50%;
+
+            background-color: #005fab;
+            color: white;
+        }
+    }
+}

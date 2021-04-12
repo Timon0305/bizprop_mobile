@@ -1,0 +1,65 @@
+/* -------------------------------------------------------------------------- */
+/*                                   Headings                                 */
+/* -------------------------------------------------------------------------- */
+
+$heading-color: #424242;
+$heading-font: "OpenSans-Bold";
+$h1-size: 30px;
+$h2-size: 22px; 
+$h3-size: 15px;
+
+/* -------------------------------------------------------------------------- */
+/*                                   Inputs                                   */
+/* -------------------------------------------------------------------------- */
+
+$dark-blue:  #172050;
+$light-blue:  #137cb8;
+
+$text-color: #515c6f;
+$icon-color: $dark-blue;
+
+$tab-height: 56px;
+
+$color-50: #0d0d0d;
+$color-100: #1a1a1a;
+$color-150: #262626;
+$color-200: #333333;
+$color-250: #404040;
+$color-300: #4d4d4d;
+$color-350: #595959;
+$color-400: #666666;
+$color-450: #737373;
+$color-500: #808080;
+$color-550: #8c8c8c;
+$color-600: #999999;
+$color-650: #a6a6a6;
+$color-700: #b3b3b3;
+$color-750: #bfbfbf;
+$color-800: #cccccc;
+$color-850: #d9d9d9;
+$color-900: #e6e6e6;
+$color-950: #f2f2f2;
+
+$label-md-text-color: var(--ion-color-primary);
+$label-ios-text-color: var(--ion-color-primary);
+$label-wp-text-color: var(--ion-color-primary);
+
+$label-ios-text-color-focused: var(--ion-color-primary);
+$label-md-text-color-focused: var(--ion-color-primary);
+$label-wp-text-color-focused: var(--ion-color-primary);
+
+$text-input-highlight-color-valid: $text-color;
+
+/* -------------------------------------------------------------------------- */
+/*                                   Buttons                                  */
+/* -------------------------------------------------------------------------- */
+
+$button-color: #ffffff;
+$button-height: 50px;
+$block-radius: 16px;
+$button-background-image: linear-gradient(to right, $light-blue, $dark-blue);
+
+
+// linear-gradient(to right, red , yellow);
+
+// linear-gradient(269deg, #172050 111%, #137cb8 -6%, #fc9970 -6%);

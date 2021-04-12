@@ -1,0 +1,40 @@
+ion-item {
+    &.item-input {
+        &.item-has-focus {
+            --highlight-color-focused: #172050;
+        }
+    }
+}
+
+.floating-subtle {
+    color: $color-300 !important;
+    font-size: 11px !important;
+    transform: translateY(280%) !important;
+
+    &.item-has-focus {
+        transform: translateY(50%), scale(0.75) !important;
+    }
+}
+
+ion-input {
+    input {
+        color: $text-color !important;
+    }
+
+    ~ .icon {
+        color: $icon-color;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        position: absolute;
+        width: 100%;
+        height: 100%;
+
+        transition: all .3s ease-in;
+
+        &.light-grey {
+            color: $color-500;
+        }
+    }
+}

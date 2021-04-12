@@ -1,0 +1,42 @@
+<div class="mb-3 position-relative">
+
+    <div class="overview-image ">
+        <div class="ripple-overflow ripple-parent">
+            <div class="container ion-activatable "
+                 (click)="view()">
+                <ion-img [src]="result.images[0]">
+                </ion-img>
+                <ion-ripple-effect></ion-ripple-effect>
+                <div class="distance">
+                    <span>{{result.distance}} km away</span>
+                </div>
+            </div>
+        </div>
+
+        <div *ngIf="editable"
+             class="edit ion-activatable ripple-parent"
+             (click)="edit($event)">
+            <i class="fas fa-pencil-alt"></i>
+            <ion-ripple-effect></ion-ripple-effect>
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-between">
+        <div class="title">
+            <span>{{result.title}}</span>
+        </div>
+        <div class="price">
+            <span>R {{result.cost}} p/m</span>
+        </div>
+    </div>
+    <div class="subtle address">
+        <span>{{result.address}}</span>
+    </div>
+
+    <div class="tags mt-2">
+        <div class="tag"
+             *ngFor="let tag of result.tags">
+            <span>{{tag}}</span>
+        </div>
+    </div>
+</div>

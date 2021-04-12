@@ -1,0 +1,98 @@
+<ion-menu contentId="main"
+          menuId="client-menu"
+          [disabled]="!enabled">
+    <ion-header>
+        <ion-toolbar>
+            <ion-title>
+                <span class="heading-logo primary">BIZ</span>
+                <span class="heading-logo secondary"> PROP</span>
+            </ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content>
+        <div class="page-content px-0">
+            <div class="upper">
+                <ion-list lines="none"
+                          class="py-0">
+                    <ion-menu-toggle>
+                        <ion-item button
+                                  (click)="navigate('/lessor/home');">
+                            <ion-icon slot="start"
+                                      name="home-outline"></ion-icon>
+                            <ion-label>Home</ion-label>
+                        </ion-item>
+                    </ion-menu-toggle>
+
+                    <ion-menu-toggle>
+                        <ion-item button
+                                  (click)="navigate('/lessor/property/add');">
+                            <ion-icon slot="start"
+                                      name="add-outline"></ion-icon>
+                            <ion-label>Add Property</ion-label>
+                        </ion-item>
+                    </ion-menu-toggle>
+
+                    <ion-menu-toggle>
+                        <ion-item button
+                                  (click)="navigate('/lessor/property/edit');">
+                            <ion-icon slot="start"
+                                      name="open-outline"></ion-icon>
+                            <ion-label>Edit Property</ion-label>
+                        </ion-item>
+                    </ion-menu-toggle>
+
+                    <ion-menu-toggle>
+                        <ion-item button
+                                  (click)="navigate('/lessor/listings');">
+                            <ion-icon slot="start"
+                                      name="folder-outline"></ion-icon>
+                            <ion-label>My listings</ion-label>
+                        </ion-item>
+                    </ion-menu-toggle>
+
+                    <ion-menu-toggle>
+                        <ion-item button
+                                  (click)="navigate('/lessor/inquiries');">
+                            <ion-icon slot="start"
+                                      name="layers-outline"></ion-icon>
+                            <ion-label>My enquiries</ion-label>
+                        </ion-item>
+                    </ion-menu-toggle>
+
+                </ion-list>
+            </div>
+            <div class="lower">
+                <ion-list lines="none"
+                          class="py-0">
+                          
+                    <ion-menu-toggle>
+                        <ion-item button
+                                  (click)="navigate('/lessor/settings');">
+                            <ion-icon slot="start"
+                                      name="build-outline"></ion-icon>
+                            <ion-label>Settings</ion-label>
+                        </ion-item>
+                    </ion-menu-toggle>
+                    <ion-menu-toggle>
+                        <ion-item button
+                                  (click)="navigate('/lessor/profile')">
+                            <ion-icon slot="start"
+                                      name="person-outline"></ion-icon>
+                            <ion-label>Profile</ion-label>
+                        </ion-item>
+                    </ion-menu-toggle>
+
+                    <ion-menu-toggle>
+                        <ion-item button
+                                  (click)="logout()">
+                            <ion-icon slot="start"
+                                      name="log-out-outline"></ion-icon>
+                            <ion-label>Logout</ion-label>
+                        </ion-item>
+                    </ion-menu-toggle>
+                </ion-list>
+            </div>
+        </div>
+
+    </ion-content>
+</ion-menu>

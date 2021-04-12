@@ -1,0 +1,40 @@
+<ion-grid>
+    <ion-row>
+        <ion-col>
+            <app-text-input [form]="form"
+                            [name]="'email'"
+                            [type]="'email'"
+                            [label]="'Email address'"></app-text-input>
+        </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col>
+            <app-input-upload class="mt-2"
+                              [label]="'Upload Profile Picture'"></app-input-upload>
+        </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col>
+            <app-text-input [form]="form"
+                            [name]="'contact1'"
+                            [label]="'Contact number'"></app-text-input>
+        </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col>
+            <app-text-input [form]="form"
+                            [name]="'contact2'"
+                            [label]="'Additional Contact Number'"></app-text-input>
+        </ion-col>
+    </ion-row>
+
+    <ion-row>
+        <ion-col class="d-flex justify-content-center">
+            <button class="biz-button no-background btn-rounded"
+                    (click)="goToBusinessDetails()">
+                <span>Business Details</span>
+                <i class="ml-3 fas fa-arrow-right"></i>
+            </button>
+        </ion-col>
+    </ion-row>
+</ion-grid>

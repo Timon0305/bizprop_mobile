@@ -1,0 +1,8 @@
+{
+  "name": "Bizprop",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

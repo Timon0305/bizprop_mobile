@@ -1,0 +1,46 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="primary">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="page-content tabs-bottom">
+        <div class="upper">
+            <app-heading-logo class="logo-smaller"
+                              [headingSize]="'normal'"
+                              [logo]="'/assets/images/BizProp FINAL-fullNoShadow.png'"
+                              [heading]="'Find your space'"></app-heading-logo>
+            <ion-grid>
+                <ion-row>
+                    <ion-col>
+                        <app-map-selector [form]="form"
+                                          [name]="'mapAddress'"
+                                          [label]="'Select your address on the map'"></app-map-selector>
+                    </ion-col>
+                </ion-row>
+
+                <ion-row class="mt-4">
+                    <ion-col class="ion-no-padding">
+                        <div class="home-block"
+                             (click)="route('client/rentals')">
+                            <img class="mb-2"
+                                 src="/assets/images/listings.png">
+                            <span>My Rentals</span>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-no-padding">
+                        <div class="home-block"
+                             (click)="route('client/inquiries')">
+                            <img class="mb-2"
+                                 src="/assets/images/inquiries.png">
+                            <span>My Inquiries</span>
+                        </div>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </div>
+    </div>
+</ion-content>

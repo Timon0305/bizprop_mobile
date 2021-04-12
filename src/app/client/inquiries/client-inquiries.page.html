@@ -1,0 +1,39 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/client/home"></ion-back-button>
+        </ion-buttons>
+        <ion-buttons slot="primary">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+
+        <ion-title>
+            <span class="page-title">My Inquiries</span>
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-segment (ionChange)="segmentChanged($event)"
+                 [value]="segment">
+        <ion-segment-button value="inquiries">
+            <ion-label>
+                Inquiries
+            </ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="watchlist">
+            <ion-label>
+                Watch List
+            </ion-label>
+        </ion-segment-button>
+    </ion-segment>
+
+    <ng-container *ngIf="segment==='inquiries'">
+        <app-inquiries [inquiries]="inquiries"></app-inquiries>
+    </ng-container>
+
+    <ng-container *ngIf="segment==='watchlist'">
+        <app-watchlist [watchlist]="watchlist"></app-watchlist>
+    </ng-container>
+
+</ion-content>

@@ -1,0 +1,9 @@
+<ion-app>
+
+    <app-client-side-menu [enabled]="(user$ | async)?.type === UserType.client"></app-client-side-menu>
+
+    <app-lessor-side-menu [enabled]="(user$ | async)?.type === UserType.lessor"></app-lessor-side-menu>
+
+    <ion-router-outlet main
+                       id="main"></ion-router-outlet>
+</ion-app>
